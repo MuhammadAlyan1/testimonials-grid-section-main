@@ -1,0 +1,329 @@
+/*  
+===================    
+root
+=================== 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+/*  
+===================    
+image-name-status 
+=================== 
+*/
+.image-name-status {
+  display: flex;
+}
+
+.image-name-status img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.status {
+  padding-bottom: 0px;
+}
+
+/*  
+===================    
+name-status 
+=================== 
+*/
+.name-status {
+  margin-left: 2rem;
+  vertical-align: bottom;
+}
+
+.name-status p:first-child {
+  margin-bottom: -10px;
+}
+
+/*  
+===================    
+container
+=================== 
+*/
+
+/*  
+===================    
+common styles
+=================== 
+*/
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth {
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.description {
+  font-weight: 500;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*  
+===================    
+first
+=================== 
+*/
+
+.first {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top left 90%;
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(210, 46%, 95%);
+}
+
+.first .status {
+  color: hsl(210, 46%, 95%);
+  opacity: 50%;
+}
+
+.first .description {
+  color: hsl(210, 46%, 95%);
+  opacity: 70%;
+}
+
+.first img {
+  border: 3px solid hsla(210, 46%, 95%, 0.5);
+}
+
+/*  
+===================    
+second
+=================== 
+*/
+
+.second {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+}
+
+.second .status {
+  color: hsl(210, 46%, 95%);
+  opacity: 50%;
+}
+
+.second .description {
+  color: hsl(210, 46%, 95%);
+  opacity: 70%;
+}
+
+/*  
+===================    
+third
+=================== 
+*/
+
+.third {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+.third .status {
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+
+.third .description {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+
+/*  
+===================    
+fourth
+=================== 
+*/
+
+.fourth {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(210, 46%, 95%);
+}
+
+.fourth .status {
+  color: hsl(210, 46%, 95%);
+  opacity: 50%;
+}
+
+.fourth .description {
+  color: hsl(210, 46%, 95%);
+  opacity: 70%;
+}
+
+.fourth img {
+  border: 3px solid hsla(263, 55%, 52%, 0.801);
+}
+
+/*  
+===================    
+fifth
+=================== 
+*/
+.fifth {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+
+.fifth .status {
+  color: hsl(217, 19%, 35%);
+  opacity: 50%;
+}
+
+.fifth .description {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+
+/*  
+===================    
+desktop layout
+=================== 
+*/
+@media (min-width: 1000px) {
+  .container {
+    padding-top: 7%;
+    padding-bottom: 7%;
+    padding-right: 15%;
+    padding-left: 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .second {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .third {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .fourth {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .fifth {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+/*  
+===================    
+mobile layout
+=================== 
+*/
+@media (max-width: 800px) {
+  .container {
+    padding: 0px;
+    grid-template-areas:
+      "first"
+      "second"
+      "third"
+      "fourth"
+      "fifth";
+  }
+
+  .first {
+    grid-area: first;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  .second {
+    grid-area: second;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .third {
+    grid-area: third;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .fourth {
+    grid-area: fourth;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .fifth {
+    grid-area: fifth;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.first:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px rgb(148, 148, 148);
+}
+
+.second:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px rgb(148, 148, 148);
+}
+
+.third:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px rgb(148, 148, 148);
+}
+
+.fourth:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px rgb(148, 148, 148);
+}
+
+.fifth:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 20px 5px rgb(148, 148, 148);
+}
